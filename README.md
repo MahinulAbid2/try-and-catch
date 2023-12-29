@@ -1,6 +1,7 @@
 # What is it?
 * `try{ } catch() {}` are used to handle errors.
 * It can only be used inside of `async function`.
+* Why should I use `try and catch`? It is used to `error handling`.
 ```javascript
 const x = async () =>{ 
   try{
@@ -53,4 +54,49 @@ On the code:
 
 <br>
 <br>
+
+### This works differently when working with `promise` or `async` function.
+```javascript
+const x = false;
+const a  = new Promise((res, rej) => {
+    if( x == true ) {
+        res( "login success" );
+    } else if ( x === false ) {
+        rej ( "Login failed" )
+    }
+})
+
+const m = async ( ) =>{
+    try {
+
+        console.log( a );  // promise doesn't require a(). it is not a function
+
+    } catch( err ) {  // in this code, the catch() {} will not be executed. WHY?
+
+        console.log( "do something" ) 
+        console.log( err )
+
+    }
+}
+
+m( );
+
+```
+
+<br>
+
+### Why:
+* 
+
+
+
+
+
+
+
+
+
+
+
+
 
