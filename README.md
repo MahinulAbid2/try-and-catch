@@ -86,8 +86,21 @@ m( );
 <br>
 
 ### Why:
-* 
+* To know why, I have to know `how promise executes?`
+* For now inorder to catch the error I have to use  `await`. Here is the code that needs to be changed:
+```javascript
+ try {
+    console.log( await a );
+    // using await will catch the error if returned any.
+    // all the promise and async needs to use await
+}
+```
 
+<br>
+<br>
+
+# How promise execute?
+* 
 
 
 
